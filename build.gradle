@@ -21,8 +21,8 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
         mavenCentral()
+        google()
         mavenLocal()
         maven {
             url 'http://4thline.org/m2'
