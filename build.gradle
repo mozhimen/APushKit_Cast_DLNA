@@ -19,17 +19,17 @@ buildscript {
     }
 }
 
-allprojects {
-    repositories {
-        mavenCentral()
-        google()
-        mavenLocal()
-        maven {
-            url 'http://4thline.org/m2'
-            allowInsecureProtocol = true
-        }
-    }
-}
+//allprojects {
+//    repositories {
+//        mavenCentral()
+//        google()
+//        mavenLocal()
+//        maven {
+//            url 'http://4thline.org/m2'
+//            allowInsecureProtocol = true
+//        }
+//    }
+//}
 
 tasks.register('clean', Delete) {
     delete rootProject.buildDir
