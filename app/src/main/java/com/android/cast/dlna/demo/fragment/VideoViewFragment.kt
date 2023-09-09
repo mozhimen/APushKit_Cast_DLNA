@@ -20,7 +20,6 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.android.cast.dlna.core.Logger
-import com.android.cast.dlna.core.Utils
 import com.android.cast.dlna.demo.DetailContainer
 import com.android.cast.dlna.demo.MainActivity
 import com.android.cast.dlna.demo.OnKeyEventHandler
@@ -30,6 +29,7 @@ import com.android.cast.dlna.dmc.DLNACastManager
 import com.android.cast.dlna.dmc.control.DeviceControl
 import com.android.cast.dlna.dmc.control.OnDeviceControlListener
 import com.android.cast.dlna.dmc.control.ServiceActionCallback
+import com.mozhimen.basick.utilk.android.net.UtilKUri
 import org.fourthline.cling.model.meta.Device
 import org.fourthline.cling.support.model.PositionInfo
 import org.fourthline.cling.support.model.TransportState
@@ -214,7 +214,7 @@ class VideoViewFragment : Fragment(), OnKeyEventHandler {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 987 && resultCode == Activity.RESULT_OK) {
             data?.data?.also { uri ->
-                val file = Utils.parseUri2File(requireContext(), uri)
+                val file = UtilKUri.uri2file(uri)
                 if (file == null) {
                     logger.w("selected: ${Uri.decode(uri.toString())}")
                     Toast.makeText(context, "找不到文件路径...", Toast.LENGTH_SHORT).show()
