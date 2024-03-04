@@ -26,6 +26,7 @@ android {
 
 dependencies {
     api(project(project.path.replace(project.name, '') + ':dlna-core'))
+    implementation(project(':SwiftKit:basick'))
 
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
