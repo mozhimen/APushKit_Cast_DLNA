@@ -1,4 +1,4 @@
-package com.android.cast.dlna.dmr
+package com.android.cast.dlna.dmr.bases
 
 import android.os.Bundle
 import androidx.annotation.CallSuper

@@ -1,14 +1,15 @@
-package com.android.cast.dlna.dmr.service
+package com.android.cast.dlna.dmr.impls
 
 import android.content.Context
 import android.media.AudioManager
 import com.android.cast.dlna.core.Logger
+import com.android.cast.dlna.dmr.commons.IAudioRenderControl
 import org.fourthline.cling.model.types.UnsignedIntegerTwoBytes
 
 /**
  *
  */
-class AudioRenderController constructor(context: Context) : AudioControl {
+class AudioRenderControlImpl constructor(context: Context) : IAudioRenderControl {
 
     private val muteVolume = UnsignedIntegerTwoBytes(0)
     private val audioManager: AudioManager
