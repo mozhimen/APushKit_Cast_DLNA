@@ -36,6 +36,8 @@ object DLNACastManager : OnDeviceRegistryListener {
     val SERVICE_TYPE_CONTENT_DIRECTORY: ServiceType = UDAServiceType("ContentDirectory")
     val SERVICE_CONNECTION_MANAGER: ServiceType = UDAServiceType("ConnectionManager")
 
+    /////////////////////////////////////////////////////////////////////////
+
     private val logger = Logger.create("CastManager")
     private val deviceRegistryImpl = DeviceRegistryImpl(this)
     private var searchDeviceType: DeviceType? = null
